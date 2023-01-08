@@ -1,27 +1,24 @@
 import "./App.css";
-//import "./styles.css";
-import Converter from "./components/inputField"
-import Dropdown from "./components/Dropdown"
+import Navbar from "./Navbar"
+import Pricing from "./pages/Pricing"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import { Route, Routes } from "react-router-dom"
 
-export default function App(){
-    const options = [
-        {value: "opt1", label: "Option 1"},
-        {value: "opt2", label: "Option 2"}
-    ];
-    return(
-        <div className = "App">
-            <Dropdown placeHolder="Select..." options={options}/>
-            <br></br>
-            <Converter></Converter>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Dropdown placeHolder="Select..." options={options}/>
-            <br></br>
-            <Converter></Converter>
-        </div>
-    );
+function App() {
+return (
+    <>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </>
+  )
+
 }
+export default App
+

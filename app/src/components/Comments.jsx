@@ -19,8 +19,8 @@ function Comments() {
     
     await setCommentDate(Date.now().toString())
     await fetch(`http://localhost:4000/api/new_comment?timestamp=${commentDate}&text=${newComment}`, {method: "POST"}).catch(err => console.log(err))
-    setMessages(prevMessages => [...prevMessages, { timestamp: commentDate, text: newComment }])
-    setNewComment("")
+    await setMessages(prevMessages => [...prevMessages, { timestamp: commentDate, text: newComment }])
+    await setNewComment("")
   }
 
   const handleChange = e => {

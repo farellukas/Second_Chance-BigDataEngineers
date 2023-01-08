@@ -1,17 +1,16 @@
-import React, {useState} from 'react';
-import "./inputField.css";
-function Field() {
-  const [data, setData]=useState(null)
-  function getData(val){
-    setData(val.target.value)
-    console.log(val.target.value)
+import React from "react";
+import "./InputField.css";
+
+function Field({ input, setInput }) {
+  function getData(e) {
+    setInput(e.target.value);
   }
+
   return (
-        <div className='input-field'>
-          <input type="text" placeholder="Enter text here" onChange={getData} />
-        </div>
-        //{/* <div className='input-field'> Result</div> */}
-  )
+    <div className="input-field">
+      <input type="text" placeholder="Enter text here" value={input} onChange={getData} />
+    </div>
+  );
 }
 
-export default Field
+export default Field;

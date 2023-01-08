@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import "./Translator.css"
 
 function Translator() {
   const [isLoading, setIsLoading] = useState(false)
@@ -73,26 +75,36 @@ function Translator() {
         !isLoading ? <h1>Loading...</h1> : 
         <>
           {/* Input */}
-          <form action="POST" onSubmit={handleSubmit}>
-            <select onChange={handleInputChange} value={input}>
+          <form className="allinputs" onSubmit={handleSubmit}>
+            <div className="input">
+            <select onChange={handleInputChange} className="select" value={input}>
               <option value="">Auto Detect</option>
               {languages.map((language, i) => (
                 <option value={language.code} key={i}>{language.name}</option>
               ))}
             </select>
-            <input type="text" value={text} onChange={handleTextChange} />
-            <input type="submit" value="Translate" />
+            <input type="text" value={text} className="submit" onChange={handleTextChange} />
+            </div>
+            <input type="submit" className="translate" value="Translate" />
           </form>
-
-          {/* Output */}
-          <select onChange={handleOutputChange} value={output}>
-            <option value="" disabled>Select a language</option>
-            {languages.map((language, i) => (
-              <option value={language.code} key={i}>{language.name}</option>
-            ))}
-          </select>
-          {/* <input type="text" value={result} /> */}
-          <p>{result}</p>
+          <div className='connect'>
+            <div className='arrow'>
+                <ArrowForwardIcon/>
+            </div>
+            {/* Output */}
+            <div className='alloutputs'>
+              <select onChange={handleOutputChange} className="selectOutput" value={output}>
+                <option value="" disabled>Select a language</option>
+                {languages.map((language, i) => (
+                  <option value={language.code} key={i}>{language.name}</option>
+                ))}
+              </select>
+              
+              
+              {/* <input type="text" value={result} /> */}
+              <p className='output'>{result}</p>
+            </div>
+          </div>
         </>
       }
     </section>

@@ -1,0 +1,32 @@
+* {
+    box-sizing:border-box;
+    
+  }
+.boxes{
+    flex-direction: row;
+}
+.container{
+    margin :0;
+}
+.messages{
+    height: calc(100vh - 150px);
+    padding: 0;
+    margin:0;
+    overflow: scroll;
+}
+.viewBox{
+  width:75%;
+  padding:15px;
+  border:0;
+  box-shadow:4px 4px 10px;
+  height:150px;
+
+}
+.submitBox{
+    width:20%;
+  padding:15px;
+  border:0;
+  box-shadow:4px 4px 10px;
+  height:150px;
+  
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
+import { Button, CardActionArea, CardActions,Box } from '@mui/material';
+import "./Comments.css"
 function Comments() {
   const [messages, setMessages] = useState([])
   const [newComment, setNewComment] = useState("")
@@ -29,15 +30,17 @@ function Comments() {
 
   return (
     <div className="comment-wrapper">
-      <div>
+      <div className='messages'>
         {!isLoading && messages.map(message => ((
           <h1>{message.text}</h1>
         )))}
       </div>
 
       <form onSubmit={handleSubmit}>
-        <input type="text" value={newComment} onChange={handleChange} />
-        <input type="submit" value="Send" />
+        <div className='boxes'>
+        <input type="text" value={newComment} className="viewBox" onChange={handleChange} />
+        <input type="submit" className='submitBox' value="Send" />
+        </div>
       </form>
     </div>
   )

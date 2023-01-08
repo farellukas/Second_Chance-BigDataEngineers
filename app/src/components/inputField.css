@@ -1,0 +1,16 @@
+.input-field{
+   border-radius: 300px;
+   font-size: 1.3rem;
+   font-weight: 300;
+   text-align:center;
+   width: 450px;
+   height: 110px;
+   border: 1px solid #ccc;
+   background-color: #fff;
+}
+
+input[type=text]{
+   border: none;
+   height: 90px;
+   width: 350px;
+}

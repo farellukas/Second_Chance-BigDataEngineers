@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dropdown from "../components/Dropdown";
 import { useEffect } from "react";
-import InputField from "../components/InputField";
+import InputField from "../components/InputField.jsx";
 import './Converter.css'
 
 const options = [

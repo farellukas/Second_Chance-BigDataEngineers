@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Dropdown from "../components/Dropdown";
 import { useEffect } from "react";
 import InputField from "../components/InputField";
+import './Converter.css'
 
 const options = [
   {
@@ -74,6 +75,7 @@ function Converter() {
             onClick={handleSelectOption}
             key={option.code}
             data-code={option.code}
+            className="measurement-btn"
           >
             {option.name}
           </button>
@@ -81,15 +83,19 @@ function Converter() {
       })}
 
       {!isLoading &&
-        <>
+        <div className="converter-container">
           {/* Input */}
+          <div className="field-group">
           <Dropdown options={unitsList} selectedValue={inputUnit} setSelectedValue={setInputUnit} />
           <InputField input={input} setInput={setInput} />
+          </div>
 
           {/* Output */}
+          <div className="field-group">
           <Dropdown options={unitsList} selectedValue={outputUnit} setSelectedValue={setOutputUnit} />
           <InputField input={output} setInput={setOutput} />
-        </>
+          </div>
+        </div>
       }
     </div>
   );

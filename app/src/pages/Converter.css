@@ -1,0 +1,19 @@
+.measurement-btn {
+  width: 150px;
+  height: 50px;
+  margin: 3em;
+}
+
+.converter-container {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  width: 100%;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em;
+}

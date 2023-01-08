@@ -1,14 +1,17 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import GTranslateIcon from '@mui/icons-material/GTranslate';
+import CottageIcon from '@mui/icons-material/Cottage';
 
 export default function Navbar() {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        Site Name
+        <CottageIcon/>
       </Link>
       <ul>
-        <CustomLink to="/pricing">topic 1</CustomLink>
-        <CustomLink to="/about">topic 2</CustomLink>
+        <CustomLink to="/Articles"> <MenuBookIcon/></CustomLink>
+        <CustomLink to="/Translator"><GTranslateIcon/></CustomLink>
       </ul>
     </nav>
   )

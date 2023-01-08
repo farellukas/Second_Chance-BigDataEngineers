@@ -2,6 +2,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import GTranslateIcon from "@mui/icons-material/GTranslate";
 import CottageIcon from "@mui/icons-material/Cottage";
+import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 
 export default function Navbar() {
   return (
@@ -15,6 +16,9 @@ export default function Navbar() {
         </CustomLink>
         <CustomLink to="/translator">
           <GTranslateIcon />
+        </CustomLink>
+        <CustomLink to="/converter">
+          <SwapHorizIcon />
         </CustomLink>
       </ul>
     </nav>

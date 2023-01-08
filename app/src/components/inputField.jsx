@@ -8,7 +8,7 @@ function Field() {
   }
   return (
         <div className='input-field'>
-          <input type="text" onChange={getData} />
+          <input type="text" placeholder="Enter text here" onChange={getData} />
         </div>
         //{/* <div className='input-field'> Result</div> */}
   )
